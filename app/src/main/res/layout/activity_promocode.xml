@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgapp"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.webmyne.modak.custome.TfEditText
+
+                android:id="@+id/txtCoupanCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTotal"
+                android:layout_weight="1.5"
+                android:hint="@string/apply_coupan_code"
+                android:textColor="@color/black" />
+
+            <com.webmyne.modak.custome.TfTextView
+                android:id="@+id/txtBtnEdtApply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txtCoupanCode"
+                android:layout_weight="0.5"
+                android:background="@drawable/viewcardbutton"
+                android:backgroundTint="@color/colorlightblack"
+                android:gravity="center"
+                android:padding="@dimen/padding_4"
+                android:text="@string/apply"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <com.webmyne.modak.custome.TfTextView
+            android:visibility="gone"
+            android:id="@+id/txtNotAppicable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/icon_close_nevi"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableTint="@color/colorsplacebackground"
+            android:gravity="center"
+            android:padding="@dimen/padding_4"
+            android:text="Not Applicable This Code"
+            android:textColor="@color/colorsplacebackground" />
+
+        <com.webmyne.modak.custome.TfTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="Available Coupans"
+            android:textSize="@dimen/text_size_20" />
+
+        <LinearLayout
+            android:id="@+id/llPromoCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:orientation="vertical" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_login"
+        android:orientation="vertical">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20"
+                android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_50"
+                    app:cardBackgroundColor="@color/pleaselogincardviewcolor">
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtLoginInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="@dimen/padding_left_10"
+                        android:text="@string/login_text"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_12" />
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                    android:id="@+id/imgLoginModak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtLoginInfo"
+                    android:padding="@dimen/pading_20"
+                    android:src="@drawable/logo_login" />
+            <com.webmyne.modak.custome.TfEditText
+                    android:id="@+id/edtEmail_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top_20"
+                    android:backgroundTint="@android:color/white"
+                    android:hint="@string/email"
+                    android:paddingBottom="@dimen/padding_bottom_20"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white" />
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top_20">
+
+
+                <com.webmyne.modak.custome.TfEditText
+                        android:id="@+id/edtPassword_Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/white"
+                        android:hint="@string/password"
+                        android:paddingBottom="@dimen/padding_bottom_20"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white" />
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtPasswordVisibility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="end"
+                        android:text="show"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14" />
+
+            </RelativeLayout>
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top_20"
+                    android:background="@color/colorsplacebackground"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/padding_top_10"
+                    android:paddingBottom="@dimen/padding_bottom_10"
+                    android:text="@string/login"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_18" />
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtForgetPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top_20"
+                    android:gravity="center_horizontal"
+                    android:text="@string/forgot_your_password"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_14" />
+
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_top_10"
+                    android:orientation="horizontal">
+
+                <View
+                        android:id="@+id/viewORLeft"
+                        android:layout_width="@dimen/layout_width_100"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="@dimen/margin_top_25"
+                        android:background="@android:color/white" />
+
+                <View
+                        android:id="@+id/viewBehaviorHowItWorks1"
+                        android:layout_width="@dimen/layout_width_100"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="@dimen/margin_top_25"
+                        android:layout_toEndOf="@+id/txtOr"
+                        android:background="@android:color/white" />
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtOr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/viewORLeft"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="@string/or"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtConnecting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top_20"
+                    android:gravity="center_horizontal"
+                    android:text="@string/connect_using"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_14" />
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:id="@+id/imgFbSignIn"
+                        android:layout_width="@dimen/width_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_right_50"
+                        android:layout_weight="1"
+                        android:src="@drawable/btn_fb"
+                        tools:ignore="Suspicious0dp" />
+
+                <ImageView
+                        android:id="@+id/imgGoogleSignIn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/btn_gplus"
+                        tools:ignore="Suspicious0dp" />
+            </LinearLayout>
+
+
+
+
+            <RelativeLayout
+                    android:id="@+id/layoutSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_bottom_40"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtDontAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/don_t_have_an_account"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_15" />
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/txtDontAccount"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/colorsignup"
+                        android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

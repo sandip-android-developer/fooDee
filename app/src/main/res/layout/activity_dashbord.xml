@@ -1,0 +1,1529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:id="@+id/llDashbord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarhome"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/colorsplacebackground">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgIconMenu"
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/height_16"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_3"
+                        android:layout_marginRight="@dimen/margin_left_10"
+                        android:src="@drawable/icon_menu" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_toEndOf="@+id/imgIconMenu"
+                        android:text="@string/ahmedabad"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <ImageView
+                        android:id="@+id/imgiconGps"
+                        android:layout_width="@dimen/width_16"
+                        android:layout_height="@dimen/height_16"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/txtCity"
+                        android:src="@drawable/icon_gps_nevi" />
+
+                    <ImageView
+                        android:id="@+id/imgIconSerach"
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/height_24"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:layout_toStartOf="@+id/imgIconFilter"
+                        android:src="@drawable/icon_search_nevi" />
+
+                    <ImageView
+                        android:id="@+id/imgIconFilter"
+                        android:layout_width="@dimen/height_20"
+                        android:layout_height="@dimen/height_20"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:layout_toStartOf="@+id/imgIconCart"
+                        android:src="@drawable/icon_filter_nevi" />
+                    <RelativeLayout
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:id="@+id/imgIconCart"
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24">
+                        <ImageView
+                            android:layout_width="@dimen/width_24"
+                            android:layout_height="@dimen/width_24"
+                            android:src="@drawable/icon_cart_nevi" />
+                        <TextView
+                            android:visibility="visible"
+                            android:id="@+id/textAddItemCount"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="0dp"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/btn_bg_circle_red"
+                            android:gravity="center"
+                            android:minWidth="19sp"
+                            android:minHeight="17sp"
+                            android:scaleType="fitStart"
+                            android:text="0"
+                            android:textColor="@color/colorsplacebackground"
+                            android:textSize="@dimen/text_size_10" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llbottomFragment"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/llbottomFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_above="@+id/layoutBottom"
+                android:background="@color/bgapp" />
+
+            <LinearLayout
+
+                android:id="@+id/layoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_70"
+
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_left_5"
+                android:paddingRight="@dimen/padding_right_5"
+                android:weightSum="7">
+
+                <LinearLayout
+                    android:id="@+id/layoutFavorite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgFavorite"
+                        android:layout_width="@dimen/width_32"
+                        android:layout_height="@dimen/height_32"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/footer_icon4_unselected" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/favorites"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_2"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.6"
+                    android:background="@android:color/darker_gray"></View>
+
+                <LinearLayout
+                    android:id="@+id/layoutDelivery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgDelivery"
+                        android:layout_width="@dimen/width_32"
+                        android:layout_height="@dimen/height_32"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/footer_icon3_unselected" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/delivery"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_2"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin_bottom_10"
+                    android:layout_weight="0.6"
+                    android:background="@android:color/darker_gray">
+
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/latoutTakeout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgTakeout"
+                        android:layout_width="@dimen/width_32"
+                        android:layout_height="@dimen/height_32"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/footer_icon1_unselected" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtTakeout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/take_out"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_2"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:background="@android:color/darker_gray"></View>
+
+                <LinearLayout
+                    android:id="@+id/layoutDinein"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgDineIn"
+                        android:layout_width="@dimen/width_32"
+                        android:layout_height="@dimen/height_32"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/footer_icon2_unselected" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtDineIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/dine_in"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--<LinearLayout
+            android:id="@+id/nav_view"
+            android:layout_width="@dimen/height_300"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical" />-->
+    <LinearLayout
+            android:theme="@style/ColorDrawerTheme"
+        android:id="@+id/contentdashbord"
+        android:layout_width="@dimen/height_300"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/bgapp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_10"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_bottom_20">
+
+            <ImageView
+                android:id="@+id/imgUserImage"
+                android:layout_width="@dimen/width_90"
+                android:layout_height="@dimen/height_90"
+                android:layout_gravity="bottom"
+                android:src="@drawable/ic_user_icon" />
+
+            <com.webmyne.modak.custome.TfTextView
+                android:id="@+id/txtuserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin_left_20"
+                android:layout_toRightOf="@+id/imgUserImage"
+                android:text="@string/no_name"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgRightArrow"
+                android:layout_width="@dimen/width_24"
+                android:layout_height="@dimen/height_24"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin_left_10"
+                android:layout_toRightOf="@+id/txtuserName"
+                android:src="@drawable/leftmenu_icon_next" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/layoutMyOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_5">
+
+                <ImageView
+                    android:layout_width="@dimen/width_24"
+                    android:layout_height="@dimen/width_24"
+                    android:src="@drawable/leftmenu_icon_myorder" />
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_order"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMoney"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_5"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_5">
+
+                <ImageView
+                    android:layout_width="@dimen/width_24"
+                    android:layout_height="@dimen/width_24"
+                    android:src="@drawable/leftmenu_icon_money" />
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modak_money"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutReview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_3"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_5">
+
+                <ImageView
+                    android:id="@+id/imgReview"
+                    android:layout_width="@dimen/width_24"
+                    android:layout_height="@dimen/width_24"
+                    android:src="@drawable/leftmenu_icon_reviews" />
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reviews"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/navHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_15">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/leftmenu_icon2" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:text="@string/home"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navMyProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_15">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/leftmenu_icon1" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:text="@string/my_profile"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navMyAdress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_15">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/leftmenu_icon3" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:text="@string/my_address"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navPaymentInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_15">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/leftmenu_icon4" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:text="@string/payment_info"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/navNotifations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_15">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/leftmenu_icon5" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:text="@string/notifications"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/navFreeMeals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_15">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/leftmenu_icon6" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:text="@string/free_meals"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_15">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/leftmenu_icon7" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:text="@string/setting"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/navHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_15">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/leftmenu_icon8" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:text="@string/help"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/navLogOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_15">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/leftmenu_icon9" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:text="@string/logout"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:theme="@style/ColorDrawerTheme"
+        android:id="@+id/contentdashbord1"
+        android:layout_width="@dimen/height_300"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/bgapp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/bgapp"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10">
+
+            <LinearLayout
+                android:id="@+id/llcloseFilter"
+                android:layout_width="@dimen/width_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgFilterBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu_icon_refine" />
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtRefine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:text="@string/refin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/width_0"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:text="@string/reset"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/imgFilterReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu_icon_reset" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_5">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5">
+
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/date"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtDateSelected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:layout_toEndOf="@+id/txtDate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:id="@+id/imgDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_menu_icon_date" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bgapp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5">
+
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/time"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:id="@+id/imgTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_menu_icon_open" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bgapp" />
+
+                <LinearLayout
+                    android:id="@+id/llTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgapp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_10"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/checkbox1Time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgcheckbox1Time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="10:00 am to 11:00 am"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/checkbox2Time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcheckbox2Time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="11:00 am to 12:00 am"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/checkbox3Time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcheckbox3Time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtTime3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="12:00 am to 01:00 pm"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/checkbox4Time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcheckbox4Time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtTime4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="01:00 pm to 2:00 pm"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlCusines"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5">
+
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtCuisines"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/cuisines"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:id="@+id/imgCusines"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_menu_icon_open" />
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:id="@+id/llCuisine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgapp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:padding="@dimen/padding_10">
+                    <LinearLayout
+                        android:id="@+id/llcbSouthIndianCuisine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgccbSouthIndianCuisine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="South Indian"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llcbNorthIndianCuisine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcbNorthIndianCuisine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="North Indian"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llcbPanjabiCuisine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcbPanjabiCuisine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Panjabi"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llcbGujaratiCuisine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcbGujaratiCuisine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Gujarati"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llcbMarathiCuisine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcbMarathiCuisine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Marathi"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llcbKolkataCuisine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcbKolkataCuisine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Kolkata"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bgapp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlFoodType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5">
+
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtFoodType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/food_type"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:id="@+id/imgfoodType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_menu_icon_open" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bgapp" />
+
+
+            <LinearLayout
+                android:id="@+id/llFoodType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgapp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="@dimen/padding_10">
+                <LinearLayout
+                    android:id="@+id/llcbVeg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10">
+
+                    <ImageView
+                        android:id="@+id/imgcbVeg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_unchecked" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:text="Veg"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llcbNonVeg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10">
+
+                    <ImageView
+                        android:id="@+id/imgcbNonVeg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_unchecked" />
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:text="Non Veg"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5">
+
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtPriceFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/price"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:id="@+id/imgPriceFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_menu_icon_open" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bgapp" />
+
+                <LinearLayout
+                    android:id="@+id/llPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgapp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_10"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/llcheckbox1Price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcheckbox1Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Price (Low to High)"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llcheckbox2Price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcheckbox2Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Price (High to Low)"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5">
+
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtModeFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/mode"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:id="@+id/imgModeFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_menu_icon_open" />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_1"/>
+                <LinearLayout
+                    android:id="@+id/llMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgapp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_10"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/llcbHomeMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcbHomeMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Home Delivery "
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llcbDineMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcbDineMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Dine In"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llcbTakeMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/imgcbTakeMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_unchecked" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Take Out"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bgapp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5">
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtDistanceFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/distance"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:id="@+id/imgDistanceFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_menu_icon_open" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bgapp" />
+
+                <LinearLayout
+                    android:id="@+id/llDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgapp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_10"
+                    android:visibility="gone">
+
+                    <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/radius"
+                        android:textColor="@color/colorsplacebackground"
+                        android:textStyle="bold" />
+
+                    <SeekBar
+                        android:id="@+id/seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:max="20"
+                        android:thumb="@drawable/menu_scroll_radius1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:orientation="horizontal">
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtProgressSeekbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_horizontal" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtSeekbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="0 miles"
+                            android:textColor="@color/black" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="20 miles"
+                            android:textColor="@color/black" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+              <!--  <RelativeLayout
+                    android:id="@+id/rlSortby"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5">
+
+
+                    <com.webmyne.fooddelivery.custome.TfTextView
+                        android:id="@+id/txtSortbyFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/sort_by"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:id="@+id/imgSortyByFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_menu_icon_open" />
+
+
+                </RelativeLayout>-->
+
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/btnFilterApply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_5"
+                    android:background="@color/colorsplacebackground"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/apply"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgapp"
+        android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <com.webmyne.modak.custome.TfTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Contact Us"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_10">
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/txtTopi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/topic"
+                        android:textColor="@color/colorsplacebackground" />
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/margin_top_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/spinerReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent">
+
+                    </Spinner>
+
+                    <ImageView
+                        android:layout_marginTop="@dimen/margin_25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_txtbox_expiry" />
+                </RelativeLayout>
+
+
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_top_10"
+                        android:text="@string/comment"
+                        android:textColor="@color/colorsplacebackground" />
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black"
+                        android:hint="@string/type_comment_here"
+                        android:maxLines="5"
+                         android:maxLength="100"
+                        android:paddingBottom="@dimen/margin_bottom_50"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black" />
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_30"
+                        android:layout_gravity="center"
+                        android:background="@drawable/helpbutton"
+                        android:text="@string/submit"
+                        android:textColor="@color/white" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <com.webmyne.modak.custome.TfTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_10"
+                android:padding="@dimen/padding_10"
+                android:text="@string/faq"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18" />
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvFaq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

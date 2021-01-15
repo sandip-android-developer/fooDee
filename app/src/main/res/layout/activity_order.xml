@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+android:background="@color/bgapp"
+android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+    android:orientation="vertical">
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:padding="@dimen/padding_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                    <TextView
+                            android:id="@+id/txtItemPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                    android:text="@string/_450"
+                    android:textColor="@color/black"/>
+                    <TextView
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/txtNumberOfItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                    android:text="@string/_2_meals"
+                    android:textColor="@color/black"/>
+                </LinearLayout>
+                <TextView
+                        android:layout_marginTop="@dimen/margin_top_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                android:text="@string/total_amount"
+                android:textColor="@color/black"/>
+                <TextView
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@android:color/transparent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/viewcardbutton"
+                        android:text="@string/view_cart"
+                />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <TextView
+                android:padding="@dimen/padding_10"
+                android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+        android:text="@string/choose_mode"
+                android:textSize="@dimen/text_size_18"
+        android:textColor="@color/black"/>
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_15"
+                    android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="2"
+                    android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                               android:weightSum="3"
+                android:orientation="horizontal">
+                    <ImageView
+                           android:layout_width="0dp"
+                            android:layout_height="@dimen/icon_height_16"
+                            android:layout_weight="1"
+                           android:src="@drawable/icon_dinein_unselected"
+
+                    />
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/icon_height_16"
+                            android:layout_weight="1"
+                            android:text="@string/dine_in"
+                            android:textColor="@color/black"
+
+                    />
+                    <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/icon_height_16"
+                    android:layout_weight="1"
+                    android:src="@drawable/unchacked_breakfast_list"
+
+                    />
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:weightSum="3"
+                              android:layout_marginLeft="@dimen/margin_top_20"
+                              android:orientation="horizontal">
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/icon_height_16"
+                            android:layout_weight="1"
+                            android:src="@drawable/footer_icon1_unselected"
+
+                    />
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/icon_height_16"
+                            android:layout_weight="1"
+                            android:text="@string/take_out"
+                            android:textColor="@color/black"
+
+                    />
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/icon_height_16"
+                            android:layout_weight="1"
+                            android:src="@drawable/unchacked_breakfast_list"
+
+                    />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_marginTop="@dimen/margin_top_10"
+                    android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <ImageView
+                        android:layout_width="@dimen/width_16"
+                        android:layout_height="@dimen/height_16"
+                        android:src="@drawable/footer_icon3_selected"
+
+                />
+                <TextView
+                        android:layout_marginLeft="@dimen/margin_top_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/icon_height_16"
+                        android:text="@string/delivery"
+                        android:textColor="@color/black"
+
+                />
+                <ImageView
+                        android:layout_marginLeft="@dimen/margin_Top_15"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/icon_height_16"
+                        android:src="@drawable/checked"
+
+                />
+            </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <TextView
+                android:padding="@dimen/padding_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+        />
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            android:orientation="horizontal">
+                <ImageView
+                        android:layout_marginRight="@dimen/margin_top_10"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/unchacked_breakfast_list"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:text="@string/as_soon_as_possible_asap_us_200_extra"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_marginTop="@dimen/margin_top_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <ImageView
+                        android:layout_marginRight="@dimen/margin_top_10"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/checked"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:text="@string/_30_mins_us_150_extra"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_marginTop="@dimen/margin_top_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <ImageView
+                        android:layout_marginRight="10dp"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/unchacked_breakfast_list"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:text="@string/_1_hr_by_5_pm_us_100_extra"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_marginTop="@dimen/margin_top_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <ImageView
+                        android:layout_marginRight="10dp"
+                        android:layout_width="@dimen/width_16"
+                        android:layout_height="@dimen/height_16"
+                        android:src="@drawable/unchacked_breakfast_list"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:text="@string/_1_30_hr"
+                />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_20">
+
+        <android.support.v7.widget.CardView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                    android:gravity="top"
+                    android:padding="@dimen/padding_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+            android:hint="@string/type_comment_here"
+            android:textColor="@color/black"/>
+            
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+        <TextView
+                android:background="@color/bgapp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_20"
+        android:layout_above="@+id/txtProceed"/>
+        <TextView
+                android:id="@+id/txtProceed"
+                android:padding="@dimen/padding_10"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        android:text="@string/proceed"
+        android:background="@color/colorsplacebackground"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

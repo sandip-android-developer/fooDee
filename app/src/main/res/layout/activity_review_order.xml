@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgapp"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_5">
+
+                    <com.webmyne.modak.custome.TfTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/delivery_time_9_30_10_30pm"
+                            android:textColor="@color/colorsplacebackground" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/padding_top_10"
+                            android:weightSum="4">
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:id="@+id/txtPaymentMethod"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginBottom="@dimen/margin_bottom_5"
+                                android:layout_weight="1.4"
+                                android:text="@string/payment_method"
+                                android:textSize="@dimen/text_size_12" />
+
+                        <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/height_16"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.3"
+                                android:src="@drawable/visa_card" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.65"
+                                android:gravity="center"
+                                android:text="@string/_1234"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:id="@+id/txtChangeCard"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.65"
+                                android:background="@drawable/viewcardbutton"
+                                android:gravity="center_horizontal"
+                                android:padding="@dimen/padding_1"
+                                android:text="@string/change"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_12" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <ScrollView
+                    android:layout_marginBottom="@dimen/height_40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvReviewOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_top_10"
+                            android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="3">
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.6">
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/padding_5"
+                                            android:weightSum="2">
+
+                                        <RelativeLayout
+                                            android:layout_gravity="start"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                            android:gravity="start"
+                                                android:orientation="horizontal">
+
+                                            <ImageView
+                                                    android:id="@+id/imgSubtotal"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentLeft="true"
+                                                    android:layout_marginRight="2dp"
+                                                    android:src="@drawable/icon_subtotal" />
+
+                                            <com.webmyne.modak.custome.TfTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_toRightOf="@+id/imgSubtotal"
+                                                    android:text="@string/subtotal"
+                                                    android:textSize="@dimen/text_size_18" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_gravity="end"
+                                            android:gravity="end"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                            <com.webmyne.modak.custome.TfTextView
+                                                android:id="@+id/txtSubTotal"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_gravity="right"
+                                                    android:text="@string/_70"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="@dimen/text_size_18" />
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.1">
+
+                                    <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="@dimen/height_40"
+                                            android:background="@color/bgapp" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1.3"
+                                        android:gravity="center_horizontal"
+                                        android:orientation="horizontal"
+                                        android:paddingRight="4dp">
+
+                                    <ImageView
+                                            android:id="@+id/imgDeliveryIcon"
+                                            android:layout_width="@dimen/width_16"
+                                            android:layout_height="@dimen/height_16"
+                                            android:layout_marginRight="@dimen/margin_right_5"
+                                            android:src="@drawable/icon_delivery_fee" />
+
+                                    <com.webmyne.modak.custome.TfTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_toRightOf="@+id/imgDeliveryIcon"
+                                            android:text="@string/delivery_fee"
+                                            android:textSize="@dimen/text_size_12" />
+
+                                    <com.webmyne.modak.custome.TfTextView
+                                        android:id="@+id/txtDeliveryfees"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="@dimen/margin_right_10"
+
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/text_size_18" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RelativeLayout
+                                android:paddingBottom="@dimen/margin_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingLeft="@dimen/padding_10"
+                                android:paddingRight="@dimen/padding_10">
+
+                                <com.webmyne.modak.custome.TfTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="@string/tax"
+                                    android:textSize="@dimen/text_size_18" />
+
+                                <com.webmyne.modak.custome.TfTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="@string/_00_00"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_18" />
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/rlPromoCode"
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:layout_width="match_parent"
+                                android:paddingBottom="@dimen/margin_5"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingLeft="@dimen/padding_10"
+                                android:paddingRight="@dimen/padding_10">
+
+                                <com.webmyne.modak.custome.TfTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="Promo Code "
+                                    android:textColor="@color/colorsplacebackground"
+                                    android:textSize="@dimen/text_size_14" />
+
+                                <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtDiscountAmmiount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginEnd="0dp"
+                                    android:text="@string/_00_00"
+                                    android:textColor="@color/colorsplacebackground"
+                                    android:textSize="@dimen/text_size_18" />
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_right_5">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="1dp"
+                                android:paddingLeft="@dimen/padding_10"
+                                android:paddingRight="@dimen/padding_10">
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:paddingLeft="@dimen/padding_10"
+                                    android:id="@+id/txtTotal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="@string/total"
+                                    android:textColor="@color/colorsplacebackground"
+                                    android:textSize="@dimen/text_size_18" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                 android:paddingRight="@dimen/padding_10"
+                                    android:id="@+id/txtTotalPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="@string/_75_25"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_18" />
+
+                          <!--  <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_top_25"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                <com.webmyne.fooddelivery.custome.TfEditText
+
+                                        android:id="@+id/txtCoupanCode"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txtTotal"
+                                        android:layout_weight="1.5"
+                                        android:hint="@string/coupan_code"
+                                        android:textColor="@color/black" />
+
+                                <com.webmyne.fooddelivery.custome.TfTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/txtCoupanCode"
+                                        android:layout_weight="0.5"
+                                        android:background="@drawable/viewcardbutton"
+                                        android:backgroundTint="@color/colorlightblack"
+                                        android:gravity="center"
+                                        android:padding="@dimen/padding_4"
+                                        android:text="@string/apply"
+                                        android:textColor="@color/white" />
+                            </LinearLayout>-->
+                            <LinearLayout
+                                android:paddingLeft="@dimen/padding_10"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:id="@+id/llPromoCode"
+                               android:layout_marginBottom="@dimen/margin_10"
+                                android:layout_below="@id/txtTotal"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtApplyPromoCode"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Apply Promo Code"
+                                    android:hint="@string/coupan_code"
+                                    android:textColor="@color/black" />
+                                <ImageView
+                                    android:layout_marginTop="@dimen/margin_5"
+                                    android:background="@drawable/dotted_line"
+                                    android:layout_width="@dimen/height_120"
+                                    android:layout_height="2dp"/>
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_40"
+                android:layout_alignParentBottom="true"
+                android:weightSum="2">
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtCnfOrder"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/getstartedbggreen"
+                    android:gravity="center"
+                    android:text="@string/confirm_order"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18" />
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/btnContinueBrowsing"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/btn_gray_background"
+                    android:text="@string/continue_browsing"
+                    android:textColor="@color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

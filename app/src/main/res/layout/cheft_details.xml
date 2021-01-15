@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+            <LinearLayout
+                    android:paddingBottom="@dimen/margin_top_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <FrameLayout android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:id="@+id/imgHomeItemImage"
+                            android:scaleType="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:src="@drawable/bg_login"
+                            android:layout_marginBottom="35dp"/>
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="30dp">
+                        <TextView
+                                android:id="@+id/txtChefName"
+                                android:gravity="center_horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/chef_dazzy_petet"
+                                android:textSize="@dimen/text_size_20"
+                                android:textColor="@android:color/white"/>
+                        <RatingBar
+                                android:id="@+id/rating"
+                                android:layout_below="@+id/txtChefName"
+                                android:layout_width="wrap_content"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_centerInParent="true"
+                                android:layout_height="wrap_content"
+                                android:numStars="5"
+                                android:stepSize="0.5"/>
+                    </RelativeLayout>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/imgHomeChefImage"
+                            android:layout_width="@dimen/width_90"
+                            android:layout_height="@dimen/height_90"
+                            android:src="@drawable/imgwomen"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="@dimen/chef_image_border_width"
+                    />
+
+                </FrameLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="-25dp"
+                        android:weightSum="4"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/margin_left_100"
+                        android:layout_toRightOf="@+id/imgHomeChefImage"
+                >
+                    <LinearLayout
+                            android:id="@+id/layoutReviewChef"
+                            android:gravity="center_horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                        <ImageView
+
+                                android:layout_toRightOf="@+id/imgHomeChefImage"
+                                android:id="@+id/imgReviewsChef"
+                                android:layout_width="@dimen/icon_width_16"
+                                android:layout_height="@dimen/icon_height_16"
+                                android:src="@drawable/icon_review"/>
+                        <TextView
+                                android:id="@+id/txtReviewsChefName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/text_size_12"
+                                android:text="@string/reviews"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:id="@+id/layoutShareChef"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:layout_toRightOf="@+id/txtHomeChefName"
+                                android:id="@+id/imgShare"
+                                android:layout_width="@dimen/icon_width_16"
+                                android:layout_height="@dimen/icon_height_16"
+                                android:src="@drawable/icon_share"/>
+                        <TextView
+                                android:id="@+id/txtShareName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/text_size_12"
+                                android:text="@string/share"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:id="@+id/layoutRate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                        <ImageView
+
+                                android:layout_toRightOf="@+id/txtHomeChefName"
+                                android:id="@+id/imgRate"
+                                android:layout_width="@dimen/icon_width_16"
+                                android:layout_height="@dimen/icon_height_16"
+                                android:src="@drawable/icon_rate"/>
+                        <TextView
+                                android:id="@+id/txtRateName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/text_size_12"
+                                android:text="@string/rate"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:id="@+id/layoutMenu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                        <ImageView
+
+                                android:layout_toRightOf="@+id/txtHomeChefName"
+                                android:id="@+id/imgMenu"
+                                android:layout_width="@dimen/icon_width_16"
+                                android:layout_height="@dimen/icon_height_16"
+                                android:src="@drawable/icon_menu_chef_detail"/>
+                        <TextView
+                                android:id="@+id/txtMenuName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/text_size_14"
+                                android:text="@string/menu"
+                                tools:ignore="NotSibling"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

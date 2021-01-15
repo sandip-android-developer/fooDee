@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C72128</color>
+    <color name="colorPrimaryDark">#AF1D23</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorsplacebackground">#C72128</color>
+    <color name="pleaselogincardviewcolor">#929090</color>
+    <color name="colorsignup">#D59D14</color>
+    <color name="bgapp">#E4E4E4</color>
+    <color name="light_gray">#F2F2F2</color>
+    <color name="sky_blue">#D2E6F0</color>
+    <color name="dark_blue">#17729F</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="getstartedbggreen">#06BC4A</color>
+    <color name="coloryellow">#ECC406</color>
+    <color name="colorlightblack">#454545</color>
+    <color name="colorgray">#ADADAD</color>
+    <color name="colorswitch">#4DD963</color>
+    <color name="edit_background">#EFEFEF</color>
+    <color name="colorSuccess">#94C842</color>
+    <color name="colorWarning">#FFA726</color>
+    <color name="colorError">#EF5350</color>
+    <color name="lightGray1">#979797</color>
+    <color name="colorInfo">#313131</color>
+    <color name="dark_gray">#E3E3E3</color>
+</resources>

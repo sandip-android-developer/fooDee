@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgapp"
+        android:orientation="vertical">
+    <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_bottom_10">
+
+        <LinearLayout
+                android:id="@+id/linerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_Top_15"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10"
+                android:weightSum="2">
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/btnCurrentOrder"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_45"
+                    android:layout_weight="1"
+                    android:background="@drawable/left_corner_background"
+                    android:gravity="center"
+                    android:text="@string/current_order"
+
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_18" />
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/btnPastOrder"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_45"
+                    android:layout_weight="1"
+                    android:background="@drawable/right_corner_white_background"
+                    android:gravity="center"
+                    android:text="@string/past_order"
+                    android:textColor="@color/lightGray1"
+                    android:textSize="18sp" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+   <android.support.v7.widget.RecyclerView
+           android:id="@+id/rvCurrentOrder"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+
+</LinearLayout>

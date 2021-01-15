@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgapp"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_left_15">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:id="@+id/txtItemPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_450"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_20" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:layout_centerVertical="true"
+                                android:id="@+id/txtNumberOfItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/txtItemPrice"
+                                android:text="@string/_2_meals"
+                                android:textColor="@color/black" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:id="@+id/txtDeliveryTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="@string/delivery_9_30_10_30pm"
+                                android:textColor="@color/coloryellow"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_top_5">
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/total_amount"
+                                android:textColor="@color/black" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:id="@+id/txtOnDemand"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="@string/on_demand"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_12"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtViewOrder_deliveryTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/viewcardbutton"
+                            android:paddingStart="@dimen/padding_left_5"
+                            android:paddingTop="@dimen/margin_2"
+                            android:paddingEnd="@dimen/padding_5"
+                            android:paddingBottom="@dimen/margin_2"
+                            android:text="@string/view_cart"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/choose_mode"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_15"
+                        android:layout_marginBottom="@dimen/padding_15"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/llDineIn_deliveryTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/height_20"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/icon_dinein_unselected" />
+
+                                <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtDineIn_deliveryTime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:text="@string/dine_in"
+                                    android:textSize="@dimen/text_size_14" />
+
+                                <ImageView
+                                    android:id="@+id/imgDineIn_deliveryTime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/icon_height_16"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/unchacked_breakfast_list"
+
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llTakeOut_deliveryTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <ImageView
+
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/height_20"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/footer_icon1_unselected"
+
+                                    />
+
+                                <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtTakeOut_deliveryTime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:text="@string/take_out"
+                                    android:textSize="@dimen/text_size_14" />
+
+                                <ImageView
+                                    android:id="@+id/imgTakeOut_deliveryTime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/icon_height_16"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/unchacked_breakfast_list"
+
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llDelivery_deliveryTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/height_20"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/footer_icon3_selected" />
+
+                                <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtDelivery_deliveryTime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:text="@string/delivery"
+                                    android:textSize="@dimen/text_size_14" />
+
+                                <ImageView
+                                    android:id="@+id/imgDelivery_deliveryTime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/icon_height_16"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/checked" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/choose_time"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/llasap_deliveryTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imgasap_deliveryTime"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="@dimen/margin_top_10"
+                                android:src="@drawable/unchacked_breakfast_list" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/as_soon_as_possible_asap_us_200_extra"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll30min_deliveryTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_top_10"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imgll30min_deliveryTime"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="@dimen/margin_top_10"
+                                android:src="@drawable/checked" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_30_mins_us_150_extra"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll1Hours_deliveryTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_top_10"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img1Hours_deliveryTime"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/unchacked_breakfast_list" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_1_hr_by_5_pm_us_100_extra"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll130Hours_deliveryTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_top_10"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img130Hours_deliveryTime"
+                                android:layout_width="@dimen/width_16"
+                                android:layout_height="@dimen/height_16"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/unchacked_breakfast_list" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_1_30_hr"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/llPickUpTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/select_order_pick_up_location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18"
+                    android:visibility="gone" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvDeliveryTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_right_10">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edtCommentTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_200"
+                            android:gravity="top"
+                            android:hint="@string/type_comment_here"
+                            android:padding="@dimen/padding_15"
+                            android:textColor="@color/black" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.webmyne.modak.custome.TfTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_20"
+            android:layout_above="@+id/txtProceed"
+            android:background="@color/bgapp" />
+
+        <com.webmyne.modak.custome.TfTextView
+            android:id="@+id/txtProceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorsplacebackground"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding_10"
+            android:text="@string/proceed"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+    </RelativeLayout>
+</LinearLayout>

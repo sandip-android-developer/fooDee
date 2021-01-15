@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgapp"
+        android:orientation="vertical">
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/imgHomeItemImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height"
+                    android:layout_marginBottom="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_food_detail" />
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp">
+
+                <com.webmyne.modak.custome.TfTextView
+
+                        android:id="@+id/txtEnterYourCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Enter Zip Code Or Address"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/txtEnterYourCity"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/rectangular"
+                        android:drawableLeft="@drawable/ic_gps"
+                        android:drawableRight="@drawable/ic_icon_search"
+                        android:hint=" Enter Zip Code Or Address    "
+                        android:imeOptions="actionDone"
+                        android:paddingRight="15dp"
+                        android:singleLine="true"
+                        android:textEditSideNoPasteWindowLayout="@drawable/ic_icon_search"
+                        android:textSize="12sp">
+
+                </AutoCompleteTextView>
+            </RelativeLayout>
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/circle_or"
+                    android:gravity="center"
+                    android:text="OR"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+
+                    />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Select Home Address"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvMyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+

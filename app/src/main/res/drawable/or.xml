@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:height="0.5dp"
+          android:id="@+id/orLine"
+          android:width="100dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+    <item
+
+            android:width="40dp"
+            android:height="40dp"
+            android:gravity="center">
+        <shape android:shape="oval"
+            android:innerRadius="0dp"
+            android:thicknessRatio="2"
+            android:useLevel="false" >
+            <solid android:color="@android:color/transparent" />
+
+            <stroke
+
+                    android:width="0.5dp"
+                    android:color="@android:color/white" />
+        </shape>
+    </item>
+
+
+</layer-list>

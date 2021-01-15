@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_10"
+            android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3">
+
+                    <ImageView
+                        android:id="@+id/ImgItem_Review"
+                            android:layout_width="@dimen/width_50"
+                            android:layout_height="@dimen/height_50"
+                            android:padding="@dimen/padding_5"
+                            android:scaleType="fitXY" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.8"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.8"
+                            android:orientation="vertical">
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtItemName_Review"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/green_capsicum_pepped_up_with_cheese_and_spices"
+                                android:textSize="@dimen/text_size_12" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                           android:id="@+id/txtItemPrice_Review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_25"
+                                android:textColor="@color/colorsplacebackground"
+                                android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.2">
+
+                        <View
+                                android:layout_width="@dimen/width_2"
+                                android:layout_height="@dimen/height_40"
+                                android:background="@color/bgapp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_pre" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtItemQty_Review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_left_5"
+                                android:layout_marginRight="@dimen/margin_right_5"
+                                android:text="@string/_3"
+                                android:textColor="@color/colorsplacebackground"
+                                android:textSize="@dimen/text_size_14" />
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_next" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.2">
+
+                        <View
+                                android:layout_width="@dimen/width_2"
+                                android:layout_height="@dimen/height_40"
+                                android:background="@color/bgapp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1">
+
+                        <com.webmyne.modak.custome.TfTextView
+                            android:id="@+id/txtItemTotalPrice_Review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="@string/_75"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

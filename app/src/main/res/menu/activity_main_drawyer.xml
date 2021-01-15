@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/navHome"
+                android:icon="@drawable/leftmenu_icon1"
+                android:title="@string/home" />
+        <item
+                android:id="@+id/navMyProfile"
+                android:icon="@drawable/leftmenu_icon2"
+                android:title="@string/my_profile" />
+        <item
+                android:id="@+id/navMyAdress"
+                android:icon="@drawable/leftmenu_icon3"
+                android:title="@string/my_address" />
+        <item
+                android:id="@+id/navPaymentInfo"
+                android:icon="@drawable/leftmenu_icon4"
+                android:title="@string/payment_info" />
+    </group>
+
+    <group android:checkableBehavior="single"
+    android:id="@+id/notification">
+        <item
+                android:id="@+id/navNotifations"
+                android:icon="@drawable/leftmenu_icon5"
+                android:title="@string/notifications" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/navFreeMeals"
+                android:icon="@drawable/leftmenu_icon6"
+                android:title="@string/free_meals" />
+        <item
+                android:id="@+id/navSetting"
+                android:icon="@drawable/leftmenu_icon7"
+                android:title="@string/setting" />
+    </group>
+    <group android:checkableBehavior="single"
+           android:id="@+id/help">
+        <item
+                android:id="@+id/navHelp"
+                android:icon="@drawable/leftmenu_icon8"
+                android:title="@string/help" />
+    </group>
+    <group android:checkableBehavior="single"
+          >
+        <item
+                android:id="@+id/navLogOut"
+                android:icon="@drawable/leftmenu_icon9"
+                android:title="@string/logout" />
+    </group>
+
+</menu>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgapp"
+        android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/padding_15">
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtBasketItemPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/_450"
+                                    android:textColor="@color/black" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtBasketNumberOfItem"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="@string/_2_meals"
+                                    android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:id="@+id/txtBasketTotalItemPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_top_5"
+                                android:text="@string/total_amount"
+                                android:textColor="@color/black" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_10"
+                        android:text="@string/contact"
+                        android:textColor="@color/black" />
+
+                <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/padding_10">
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/name"
+                                android:textColor="@color/colorsplacebackground" />
+
+                        <com.webmyne.modak.custome.TfEditText
+                                android:id="@+id/edtFirstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/bgapp"
+                                android:hint="@string/enter_first_name"
+                                android:singleLine="true"
+                                android:textColor="@color/black" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_top_5"
+                                android:text="@string/email"
+                                android:textColor="@color/colorsplacebackground" />
+
+                        <com.webmyne.modak.custome.TfEditText
+                                android:id="@+id/edtEmailAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/bgapp"
+                                android:hint="@string/enter_email_address"
+                                android:singleLine="true"
+                                android:textColor="@color/black" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mobile"
+                                android:textColor="@color/colorsplacebackground" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">/>
+
+                            <com.webmyne.modak.custome.TfEditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/bgapp"
+                                    android:maxLength="3"
+                                    android:singleLine="true"
+                                    android:text="@string/_91" />
+
+                            <com.webmyne.modak.custome.TfEditText
+                                    android:id="@+id/edtPhoneNumebr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/bgapp"
+                                    android:hint="@string/enter_mobile_number"
+                                    android:inputType="number"
+                                    android:maxLength="10"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_10"
+                        android:text="@string/delivery_address"
+                        android:textColor="@color/black" />
+
+                <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/padding_10">
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_address"
+                                android:textColor="@color/colorsplacebackground" />
+
+                        <com.webmyne.modak.custome.TfEditText
+                                android:id="@+id/edtHomeAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/bgapp"
+                                android:hint="@string/enter_home_address"
+                                android:singleLine="true"
+                                android:textColor="@color/black" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/address_line1"
+                                android:textColor="@color/colorsplacebackground" />
+
+                        <com.webmyne.modak.custome.TfEditText
+                                android:id="@+id/edtHomeAddress1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/bgapp"
+                                android:hint="@string/enter_address_line1"
+                                android:singleLine="true"
+                                android:textColor="@color/black" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/address_line2"
+                                android:textColor="@color/colorsplacebackground" />
+
+                        <com.webmyne.modak.custome.TfEditText
+                                android:id="@+id/edtHomeAddress2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/bgapp"
+                                android:hint="@string/enter_address_line2"
+                                android:singleLine="true"
+                                android:textColor="@color/black" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/country"
+                                android:textColor="@color/colorsplacebackground" />
+
+                        <Spinner
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:id="@+id/edtCountry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/bgapp"
+                                android:hint="@string/enter_country"
+                                android:singleLine="true"
+                                android:textColor="@color/black" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/city"
+                                android:textColor="@color/colorsplacebackground" />
+
+                        <Spinner
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:id="@+id/edtCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/bgapp"
+                                android:hint="@string/enter_city"
+                                android:singleLine="true"
+                                android:textColor="@color/black" />
+
+                        <com.webmyne.modak.custome.TfTextView
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/zip_code"
+                                android:textColor="@color/colorsplacebackground" />
+
+                        <com.webmyne.modak.custome.TfEditText
+                                android:id="@+id/edtZipNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/bgapp"
+                                android:hint="@string/enter_zip_code"
+                                android:singleLine="true"
+                                android:textColor="@color/black" />
+
+                        <CheckBox
+                                android:id="@+id/chkIos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="80dp"
+                                android:text="@string/terms_and_condition" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.webmyne.modak.custome.TfTextView
+                android:id="@+id/sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_bottom_38"
+                android:background="@color/bgapp" />
+
+        <com.webmyne.modak.custome.TfTextView
+                android:id="@+id/txtSelectPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/signupbutton"
+                android:gravity="center"
+                android:paddingTop="@dimen/paddint_top_10"
+                android:paddingBottom="@dimen/padding_bottom_10"
+                android:text="@string/select_payment_method"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_18" />
+    </RelativeLayout>
+</LinearLayout>
+
+
+

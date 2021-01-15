@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:aandroid="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:background="@color/bgapp">
+    <TextView
+            android:id="@+id/blank"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/darker_gray"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_bottom_20"
+               android:layout_marginTop="@dimen/margin_top_10">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_gravity="bottom"
+                android:id="@+id/imgChef"
+                android:layout_width="@dimen/width_90"
+                android:layout_height="@dimen/height_90"
+                android:src="@drawable/imgwomen"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="@dimen/chef_image_border_width"
+        />
+        <TextView
+                android:layout_marginLeft="@dimen/margin_left_20"
+                android:layout_centerInParent="true"
+                android:id="@+id/txtNameOfChef"
+                android:layout_toRightOf="@+id/imgChef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:text="@string/lauren_taylor"
+                android:textStyle="bold"
+        android:textColor="@color/black"/>
+        <ImageView
+                android:layout_marginLeft="@dimen/margin_left_10"
+                android:layout_centerInParent="true"
+                android:layout_width="32dp"
+                android:id="@+id/imgRightArrow"
+                android:layout_toRightOf="@+id/txtNameOfChef"
+                   android:layout_height="32dp"
+                android:src="@drawable/leftmenu_icon_next"/>
+
+        
+    </RelativeLayout>
+    <View android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="@color/black"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+    android:weightSum="3">
+        <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/layoutMyOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center">
+            <ImageView
+                    android:layout_width="@dimen/width_32"
+                    android:layout_height="@dimen/height_32"
+            android:src="@drawable/leftmenu_icon_myorder"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_order"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/black"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_marginTop="@dimen/margin_top_5"
+                android:id="@+id/layoutMoney"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_5"
+                android:gravity="center">
+            <ImageView
+                    android:layout_width="@dimen/width_32"
+                    android:layout_height="@dimen/height_32"
+                    android:src="@drawable/leftmenu_icon_money"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modak_money"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_marginTop="@dimen/margin_top_3"
+                android:id="@+id/layoutReview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_5"
+                android:gravity="center">
+            <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="@dimen/width_32"
+                    android:layout_height="@dimen/height_32"
+                    android:src="@drawable/leftmenu_icon_reviews"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reviews"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

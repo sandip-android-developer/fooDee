@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    style="@style/AppTheme">
+
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarhome"
+            android:layout_width="match_parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_height="?actionBarSize"
+        android:background="@color/colorsplacebackground">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <ImageView
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:id="@+id/imgIconMenu"
+                    android:layout_width="@dimen/width_16"
+                    android:layout_height="@dimen/height_16"
+            android:src="@drawable/icon_menu"
+            android:layout_marginRight="@dimen/margin_left_10"
+            android:layout_alignParentStart="true"/>
+            <TextView
+                    android:layout_toEndOf="@+id/imgIconMenu"
+                    android:id="@+id/txtCity"
+                    android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                     android:text="@string/ahmedabad"
+                     android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_marginRight="@dimen/margin_10"/>
+            <ImageView
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:layout_toEndOf="@+id/txtCity"
+                    android:id="@+id/imgiconGps"
+                    android:layout_width="@dimen/width_16"
+                    android:layout_height="@dimen/height_16"
+                    android:src="@drawable/icon_gps_nevi"/>
+            <ImageView
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:layout_toLeftOf="@+id/imgIconNavi"
+                    android:id="@+id/imgIconSerach"
+                    android:layout_width="@dimen/width_16"
+                    android:layout_height="@dimen/height_16"
+                    android:src="@drawable/icon_search_nevi"/>
+            <ImageView
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_toLeftOf="@+id/imgIconCart"
+                    android:id="@+id/imgIconNavi"
+                    android:layout_width="@dimen/width_16"
+                    android:layout_height="@dimen/height_16"
+                    android:src="@drawable/icon_filter_nevi"/>
+            <ImageView
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:id="@+id/imgIconCart"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/width_16"
+                    android:layout_height="@dimen/height_16"
+                    android:src="@drawable/icon_cart_nevi"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+</LinearLayout>

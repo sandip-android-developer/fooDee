@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgapp"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10">
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtOrderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="OrderId:#BG4567"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    />
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$25.OO"
+                    android:textColor="@color/colorsplacebackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtOrderDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOrderId"
+                    android:text="31/08/2019"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOrderDate"
+                    android:text="Delivered"
+                    android:textColor="@color/getstartedbggreen"
+                    android:textSize="18sp" />
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/btnCancel"
+                    android:layout_width="@dimen/height_100"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/txtPrice"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/margin_top_10"
+                    android:background="@drawable/btn_reorder"
+                    android:gravity="center"
+                    android:text="Reorder"
+                   android:paddingStart="@dimen/text_size_10"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_10" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

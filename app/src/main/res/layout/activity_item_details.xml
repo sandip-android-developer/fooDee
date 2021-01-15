@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_gray"
+        android:theme="@style/AppTheme"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarhome"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorsplacebackground">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/imgIconMenuItrmDetails"
+                    android:layout_width="@dimen/width_24"
+                    android:layout_height="@dimen/height_16"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:layout_marginRight="@dimen/margin_left_10"
+                    android:src="@drawable/icon_back_nevi" />
+
+            <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtItemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toEndOf="@+id/imgIconMenuItrmDetails"
+                    android:text="About Item"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_18" />
+
+            <RelativeLayout
+                    android:id="@+id/imgIconCart"
+                    android:layout_width="@dimen/width_24"
+                    android:layout_height="@dimen/width_24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10">
+
+                <ImageView
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/width_24"
+                        android:src="@drawable/icon_cart_nevi" />
+
+                <TextView
+                        android:id="@+id/textAddItemCountDetails"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="0dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/btn_bg_circle_red"
+                        android:gravity="center"
+                        android:minWidth="19sp"
+                        android:minHeight="17sp"
+                        android:scaleType="fitStart"
+                        android:text="0"
+                        android:textColor="@color/colorsplacebackground"
+                        android:textSize="@dimen/text_size_10"
+                        android:visibility="visible" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1">
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/padding_5">
+                        <ImageView
+                            android:id="@+id/imgChefImage"
+                            android:layout_width="@dimen/width_70"
+                            android:layout_height="@dimen/height_70"
+                            android:paddingLeft="5dp"
+                            android:src="@drawable/imgwomen" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/margin_bottom_10"
+                                        android:layout_weight="1.3"
+                                        android:orientation="horizontal">
+                                    <com.webmyne.modak.custome.TfTextView
+                                            android:id="@+id/txtHomeChefName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:singleLine="true"
+                                            android:text="@string/cheff_dazzy"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/text_size_14" />
+                                    <RatingBar
+                                            android:id="@+id/rating"
+                                            style="?android:attr/ratingBarStyleSmall"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="-10dp"
+                                            android:layout_marginRight="-10dp"
+                                            android:numStars="5"
+                                            android:scaleX="0.7"
+                                            android:stepSize="0.5" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/margin_bottom_2"
+                                        android:layout_weight="0.7"
+                                        android:orientation="horizontal">
+
+                                    <ImageView
+                                            android:id="@+id/imgHomeIconDistance"
+                                            android:layout_width="@dimen/icon_width_16"
+                                            android:layout_height="@dimen/icon_height_16"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="@dimen/margin_bottom_5"
+                                            android:src="@drawable/icon_distance" />
+
+                                    <com.webmyne.modak.custome.TfTextView
+                                            android:id="@+id/txtHomeItemDistabace"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:singleLine="true"
+                                            android:text="@string/txt_item_distance"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/text_size_10" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtHomeItemName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_bottom_5"
+                                    android:paddingLeft="@dimen/margin_10"
+                                    android:text="@string/txt_item_name"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/text_item_name_size_14" />
+                            <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:orientation="horizontal"
+                                    android:padding="@dimen/padding_10">
+
+                                <com.webmyne.modak.custome.TfTextView
+                                        android:id="@+id/txtHomeItemFamousPlace"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/cuisine"
+                                        android:textColor="@color/colorsplacebackground"
+                                        android:textSize="@dimen/text_size_14" />
+
+                                <com.webmyne.modak.custome.TfTextView
+                                        android:id="@+id/txtHomeItemFamousPlaceName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/margin_3"
+                                        android:layout_toRightOf="@+id/txtHomeItemFamousPlace"
+                                        android:text="@string/south_indian"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/text_size_14" />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:id="@+id/itemImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_170"
+                                android:scaleType="fitXY" />
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:orientation="horizontal"
+                                android:paddingLeft="@dimen/padding_10"
+                                android:paddingTop="@dimen/padding_10"
+                                android:paddingRight="@dimen/padding_10"
+                                android:paddingBottom="@dimen/margin_bottom_2">
+
+                            <ImageView
+                                    android:id="@+id/imgHomeItemLeftArrow1"
+                                    android:layout_width="@dimen/widht_20"
+                                    android:layout_height="@dimen/widht_20"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/margin_10"
+                                    android:layout_marginTop="@dimen/margin_10"
+                                    android:layout_toStartOf="@+id/txtCountNumberOfItemDetails"
+                                    android:src="@drawable/icon_pre" />
+
+                            <ImageView
+                                    android:id="@+id/imgHomeItemRightArrow1"
+                                    android:layout_width="@dimen/widht_20"
+                                    android:layout_height="@dimen/widht_20"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/margin_10"
+                                    android:layout_marginTop="@dimen/margin_top_10"
+                                    android:layout_toStartOf="@+id/imgHomeItemAdd"
+                                    android:src="@drawable/icon_next" />
+
+                            <ImageView
+                                    android:id="@+id/imgHomeItemAdd"
+                                    android:layout_width="@dimen/icon_add_width_33"
+                                    android:layout_height="@dimen/icon_add_height_32"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/margin_left_10"
+                                    android:background="@drawable/homecircle"
+                                    android:src="@drawable/icon_add" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtCountNumberOfItemDetails"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/margin_10"
+                                    android:layout_marginTop="@dimen/margin_20"
+                                    android:layout_toStartOf="@+id/imgHomeItemRightArrow1"
+                                    android:text="0"
+                                    android:textColor="@color/colorsplacebackground"
+                                    android:textSize="@dimen/text_size_20" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtHomeItemQty"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/margin_top_10"
+                                    android:layout_toStartOf="@id/imgHomeItemLeftArrow1"
+                                    android:text="@string/qty"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/text_size_20" />
+
+                            <com.webmyne.modak.custome.TfTextView
+                                    android:id="@+id/txtItemPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/margin_top_10"
+                                    android:text="@string/itrm_price"
+                                    android:textColor="@color/colorsplacebackground"
+                                    android:textSize="@dimen/text_size_20" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_weight="0.9"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/linerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_70"
+                    android:background="@color/light_gray"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/btnDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/colorsplacebackground"
+                        android:gravity="center"
+                        android:text="@string/details"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_20" />
+
+                <com.webmyne.modak.custome.TfTextView
+                        android:id="@+id/btnReviews"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/button"
+                        android:gravity="center"
+                        android:text="@string/reviews"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_20" />
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/margin_top_10"
+                    android:paddingTop="@dimen/margin_top_5"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingBottom="@dimen/margin_top_5">
+
+                <ScrollView
+
+                        android:id="@+id/txtDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                    <com.webmyne.modak.custome.TfTextView
+                             android:id="@+id/txtItemDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/black" />
+                </ScrollView>
+
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvItemReviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_top_10"
+                        android:gravity="center"
+                        android:text="@string/reviews"
+                        android:textColor="@android:color/black"
+                        android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

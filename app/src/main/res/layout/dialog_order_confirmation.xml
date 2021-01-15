@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/margin_20"
+    android:background="@drawable/dialgog_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_20">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imgCnf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/ic_confirmation" />
+
+        <com.webmyne.modak.custome.TfTextView
+            android:id="@+id/txtOrderConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:text="ORDER CONFIRMATION" />
+
+        <com.webmyne.modak.custome.TfTextView
+            android:id="@+id/txtConfMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center"
+            android:text="Order #12345 has been placed successfully and an invoice has been emailed to the customer" />
+
+        <com.webmyne.modak.custome.TfTextView
+            android:id="@+id/txtViewOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center"
+            android:text="VIEW ORDER"
+            android:textColor="@color/com_facebook_blue" />
+    </LinearLayout>
+</LinearLayout>
+

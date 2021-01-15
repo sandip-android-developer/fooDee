@@ -1,0 +1,68 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=74:57:99:53:02:EA:57:CB:27:48:2F:F5:6C:67:A8:49:A8:0F:3A:9A%3Bcom.webmyne.fooddelivery.ui
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    74:57:99:53:02:EA:57:CB:27:48:2F:F5:6C:67:A8:49:A8:0F:3A:9A
+
+    SHA-1 certificate fingerprint:
+    74:57:99:53:02:EA:57:CB:27:48:2F:F5:6C:67:A8:49:A8:0F:3A:9A
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=74:57:99:53:02:EA:57:CB:27:48:2F:F5:6C:67:A8:49:A8:0F:3A:9A%3Bcom.webmyne.fooddelivery
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    74:57:99:53:02:EA:57:CB:27:48:2F:F5:6C:67:A8:49:A8:0F:3A:9A
+
+    SHA-1 certificate fingerprint:
+    74:57:99:53:02:EA:57:CB:27:48:2F:F5:6C:67:A8:49:A8:0F:3A:9A
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="AIzaSyAIkP5cxfE9GYQNBTPX4MzticArQr1DcNI" translatable="false">YOUR_KEY_HERE</string>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=74:57:99:53:02:EA:57:CB:27:48:2F:F5:6C:67:A8:49:A8:0F:3A:9A%3Bcom.webmyne.fooddelivery
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    74:57:99:53:02:EA:57:CB:27:48:2F:F5:6C:67:A8:49:A8:0F:3A:9A
+
+    SHA-1 certificate fingerprint:
+    74:57:99:53:02:EA:57:CB:27:48:2F:F5:6C:67:A8:49:A8:0F:3A:9A
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="AIzaSyDy5L4A0Bgnc8mojQ9rECw9RgZs64XrCZU" translatable="false">YOUR_KEY_HERE</string>
+</resources>

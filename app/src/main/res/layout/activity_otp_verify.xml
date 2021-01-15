@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/llResend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtDon_t_received"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:ellipsize="end"
+                    android:text="@string/don_t_received_the_code"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <com.webmyne.modak.custome.TfTextView
+                    android:id="@+id/txtResend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:backgroundTint="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:text="@string/resend"
+                    android:textColor="@color/colorsplacebackground"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/signup_top" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtWelcomeTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_20"
+                        android:gravity="center"
+                        android:text="@string/welcome_to"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_30" />
+
+
+                    <!--   <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="@string/modak"
+                               android:id="@+id/txtU"
+                               android:textAllCaps="true"
+                               android:textColor="@color/white"
+                               android:textSize="36sp"/>-->
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_50"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:orientation="horizontal">
+
+                <com.webmyne.modak.custome.TfEditText
+                        android:id="@+id/edtMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:hint="@string/phone_number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/llOtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/margin_20"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_10"
+                    android:visibility="gone">
+
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/otp_background">
+
+                    <com.webmyne.modak.custome.TfEditText
+                            android:id="@+id/edtOpt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="X"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:nextFocusRight="@+id/edtOpt2"
+                            android:paddingLeft="@dimen/padding_10"
+                            android:paddingTop="@dimen/padding_15"
+                            android:paddingRight="@dimen/padding_10"
+                            android:paddingBottom="@dimen/padding_15"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14">
+
+                        <requestFocus />
+                    </com.webmyne.modak.custome.TfEditText>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/otp_background">
+
+                    <com.webmyne.modak.custome.TfEditText
+                            android:id="@+id/edtOpt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="X"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:paddingLeft="@dimen/padding_10"
+                            android:paddingTop="@dimen/padding_15"
+                            android:paddingRight="@dimen/padding_10"
+                            android:paddingBottom="@dimen/padding_15"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14">
+
+                    </com.webmyne.modak.custome.TfEditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/otp_background">
+
+                    <com.webmyne.modak.custome.TfEditText
+                            android:id="@+id/edtOpt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="11dp"
+                            android:layout_marginRight="11dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="X"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:paddingLeft="@dimen/padding_10"
+                            android:paddingTop="@dimen/padding_15"
+                            android:paddingRight="@dimen/padding_10"
+                            android:paddingBottom="@dimen/padding_15"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14">
+
+
+                    </com.webmyne.modak.custome.TfEditText>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/otp_background">
+
+                    <com.webmyne.modak.custome.TfEditText
+                            android:id="@+id/edtOpt4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="X"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:paddingLeft="@dimen/padding_10"
+                            android:paddingTop="@dimen/padding_15"
+                            android:paddingRight="@dimen/padding_10"
+                            android:paddingBottom="@dimen/padding_15"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14">
+
+
+                    </com.webmyne.modak.custome.TfEditText>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/otp_background">
+
+                    <com.webmyne.modak.custome.TfEditText
+                            android:id="@+id/edtOpt5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="X"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:nextFocusRight="@+id/edtOpt6"
+                            android:paddingLeft="@dimen/padding_10"
+                            android:paddingTop="@dimen/padding_15"
+                            android:paddingRight="@dimen/padding_10"
+                            android:paddingBottom="@dimen/padding_15"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14">
+
+
+                    </com.webmyne.modak.custome.TfEditText>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/otp_background">
+
+                    <com.webmyne.modak.custome.TfEditText
+                            android:id="@+id/edtOpt6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="X"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:paddingLeft="@dimen/padding_10"
+                            android:paddingTop="@dimen/padding_15"
+                            android:paddingRight="@dimen/padding_10"
+                            android:paddingBottom="@dimen/padding_15"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.webmyne.modak.custome.TfTextView
+                android:id="@+id/btnSendOtp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:background="@drawable/red_button"
+                android:gravity="center"
+                android:paddingStart="@dimen/padding_15"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_15"
+                android:paddingBottom="@dimen/padding_10"
+
+                android:text="@string/send_otp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
